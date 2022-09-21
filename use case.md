@@ -1,4 +1,4 @@
- #USE CASE OF A METAPRETER PAYLOAD VIRUS
+#USE CASE OF A METAPRETER PAYLOAD VIRUS-
 In the field of Cyber security and ethical hacking, system protection and data privacy is one of the most important thing.
 This payload can be use to hack someone’s system and get full access of the system thus creating new loopholes and vulnerabilities in the system.
 And so from ethical hacking point of view, this payload can give full access of a system to a hacker.
